@@ -32,7 +32,7 @@ for example, `color: red blue` will color the selected element halfway between `
 
 ### `align`
 
-aligns the target element within its parent; can be `left`, `bottom-left`, `bottom`, `bottom-right`, `right`, `top-right`, `top`, or `top-left`
+aligns the target element within its parent; can be `center`, `left`, `bottom-left`, `bottom`, `bottom-right`, `right`, `top-right`, `top`, or `top-left`
 
 if multiple alignment keywords are within this property, their resulting positions will be averaged together
 
