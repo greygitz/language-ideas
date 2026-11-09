@@ -8,6 +8,16 @@ Sparks for reactive stuff maybe but just a name I'm throwing out there
 
 so, Glint...
 
+# types
+
+### `px` (like `5px`)
+
+references a measurement in pixels
+
+### `%` (like `100%`)
+
+when put inside of a selector, references a percentage of the same property from the containing element
+
 # basic properties
 
 ### `color`
