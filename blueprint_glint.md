@@ -39,8 +39,8 @@ document
 
     text "text element showcase" end
     
-    block (red) -- block with class "red" and "left"
-        text (left)
+    block (red) -- block with class "red"
+        text (left) -- class "left"
             "text inside block"
         end
     end
