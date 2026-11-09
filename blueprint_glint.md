@@ -14,7 +14,7 @@ so, Glint...
 
 sets the color of the target element; can be `red`, `green`, `blue`, `black`, `white`, `grey`, `magenta`, `yellow`, or `cyan`
 
-if multiple color keywords are within this property, they will be averaged together
+if multiple color keywords are within this property, their colors will be averaged together
 
 for example, `color: red blue` will color the selected element halfway between `red` and `blue`
 
@@ -24,9 +24,7 @@ for example, `color: red blue` will color the selected element halfway between `
 
 aligns the target element within its parent; can be `left`, `bottom-left`, `bottom`, `bottom-right`, `right`, `top-right`, `top`, or `top-left`
 
-if multiple alignment keywords are within this property, they will be averaged together
-
-for example, `align: bottom-left left` will align the selected element halfway between `bottom-left` and `left`
+if multiple alignment keywords are within this property, their resulting positions will be averaged together
 
 ---
 
@@ -62,7 +60,8 @@ end
     align: left   
 end
 
--- "block block" will select all blocks inside of another block
+-- "block" will select all block elements
+-- "block.block" will select all blocks inside of another block
 -- "*" will select everything
 
 ```
