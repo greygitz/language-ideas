@@ -14,6 +14,8 @@ so, Glint...
 
 references a measurement in pixels
 
+---
+
 ### `%` (like `100%`)
 
 when put inside of a selector, references a percentage of the same property from the containing element
@@ -30,11 +32,23 @@ for example, `color: red blue` will color the selected element halfway between `
 
 ---
 
-### `align`
+### `float`
 
 aligns the target element within its parent; can be `center`, `left`, `bottom-left`, `bottom`, `bottom-right`, `right`, `top-right`, `top`, or `top-left`
 
 if multiple alignment keywords are within this property, their resulting positions will be averaged together
+
+---
+
+### `width`
+
+sets the width of the target element
+
+---
+
+### `height`
+
+sets the height of the target element
 
 ---
 
@@ -67,7 +81,7 @@ and styles (styles.glnt):
 end
 
 ?left: -- select all elements of type "left"
-    align: left   
+    float: left   
 end
 
 -- "block" will select all block elements
