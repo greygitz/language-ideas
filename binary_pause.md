@@ -2,7 +2,7 @@ condition starts at `cell == 0`
 
 ---
 
-` `/`Zero` zero cell
+` `/`Zero` no operation
 
 `,`/`+`/`Increment` increment
 
@@ -32,9 +32,9 @@ condition starts at `cell == 0`
 
 ---
 
-`;;; `/`BackMark` backwards jump marker
+`;;; `/`JumpMark` jump marker
 
-`;;;,`/`Back` jump to last `;;; `
+`;;;,`/`Back` jump to last jump marker
 
 `;;;'`/`Then` execute next word if condition is met
 
