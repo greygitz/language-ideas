@@ -36,7 +36,7 @@ condition starts at `cell == 0`
 
 `;;;,`/`Back` jump to last `;;; `
 
-`;;;'`/`If` execute next word if condition is met
+`;;;'`/`IfThen` execute next word if condition is met
 
 `;;;;` escape tier 4
 
