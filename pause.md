@@ -36,19 +36,19 @@ condition starts at `cell == 0`
 
 `;;;,`/`Back` jump to last `;;; `
 
-`;;;'`/`IfThen` execute next word if condition is met
+`;;;'`/`Then` execute next word if condition is met
 
 `;;;;` escape tier 4
 
 ---
 
-`;;;; `/`IsNotZero` set condition to `cell != 0`
+`;;;; `/`IfNotZero` set condition to `cell != 0`
 
-`;;;;,`/`IsZero` set condition to `cell == 0`
+`;;;;,`/`IfZero` set condition to `cell == 0`
 
-`;;;;'`/`IsAcc` set condition to `cell == acc`
+`;;;;'`/`IfIsAcc` set condition to `cell == acc`
 
-`;;;;;`/`IsNotAcc` set condition to `cell != acc`
+`;;;;;`/`IfIsNotAcc` set condition to `cell != acc`
 
 ---
 
