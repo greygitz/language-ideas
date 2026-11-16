@@ -6,11 +6,11 @@ fuck you if you try to build it with an ast ig
 
 # types:
 
-Boolean: resolved BooleanExpr or just `true`/`false`
+Boolean: `true`/`false`
 
 Integer: 32-bit integer; constructed by just leaving numbers in code not separated by spaces
 
-Expression: unresolved expression; guaranteed to become Integer or Boolean eventually, resolves containing expressions before resolving itself. constructed with `(expr)`
+Expression: unresolved expression; guaranteed to resolve to Integer or Boolean eventually, resolves containing expressions before resolving itself. constructed with `(expr)`
 
 List: contains multiple values of any type. constructed with `[x, y, z]`
 
