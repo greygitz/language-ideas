@@ -36,7 +36,7 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 
 `(X / Y)`: resolves to the *floored* result of `X` / `Y`; only supports Integer, resolves containing expressions
 
-`(X == Y)`: resolves to `true` if X is equal to Y, `false` if not; only supports Integer, resolves containing expressions
+`(X == Y)`: resolves to `true` if X is equal to Y, `false` if not; supports Integer and Boolean, resolves containing expressions
 
 `(X > Y)`: resolves to `true` if X is greater than Y, false if not; only supports Integer, resolves containing expressions
 
@@ -51,3 +51,5 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 `putc (n)`: prints a single character `n` as an ASCII value
 
 `puts [n]`: prints out each number of the list `n` as an ASCII value
+
+`break`: break out of loop
