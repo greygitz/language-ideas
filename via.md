@@ -8,11 +8,9 @@ fuck you if you try to build it with an ast ig
 
 Boolean: resolved BooleanExpr or just `true`/`false`
 
-BooleanExpr: unresolved boolean expression; guaranteed to become Boolean eventually, resolves containing expressions. constructed with `<:expr:>`
-
 Integer: 32-bit integer; constructed by just leaving numbers in code not separated by spaces
 
-IntegerExpr: unresolved integer expression; guaranteed to become Integer eventually, resolves containing expressions. constructed with `(expr)`
+Expression: unresolved expression; guaranteed to become Integer or Boolean eventually, resolves containing expressions before resolving itself. constructed with `(expr)`
 
 List: contains multiple values of any type. constructed with `[x, y, z]`
 
@@ -40,15 +38,17 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 
 `(X / Y)`: resolves to the *floored* result of `X` / `Y`; only supports Integer, resolves containing expressions
 
-`<: X == Y :>`: resolves to `true` if X is equal to Y, `false` if not; only supports Integer, resolves containing expressions
+`(X == Y)`: resolves to `true` if X is equal to Y, `false` if not; only supports Integer, resolves containing expressions
 
-`<: X > Y :>`: resolves to `true` if X is greater than Y, false if not; only supports Integer, resolves containing expressions
+`(X > Y)`: resolves to `true` if X is greater than Y, false if not; only supports Integer, resolves containing expressions
 
-`<: X < Y :>`: resolves to `true` if X is lesser than Y, false if not; only supports Integer, resolves containing expressions
+`(X < Y)`: resolves to `true` if X is lesser than Y, false if not; only supports Integer, resolves containing expressions
 
 # built-ins:
 
-`if <: expr :> {code}`: runs `code`, but only if `expr` resolves to or is `true`
+`if (expr) {code}`: runs `code`, but only if `expr` resolves to `true`
+
+`times (expr) {code}`: runs `code`, `expr` times; if `expr` resolves to `true`, the code is run forever
 
 `putc (n)`: prints a single character `n` as an ASCII value
 
