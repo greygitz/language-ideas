@@ -1,6 +1,4 @@
-built to be interpreted token by token
-
-fuck you if you try to build it with an ast ig
+built to be interpreted easily
 
 ---
 
