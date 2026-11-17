@@ -10,19 +10,19 @@ Integer: 32-bit integer; constructed by just leaving numbers in code not separat
 
 Expression: unresolved expression; guaranteed to resolve to Integer or Boolean eventually, resolves containing expressions before resolving itself. constructed with `(expr)`
 
-List: contains multiple values of any type. constructed with `[x, y, z]`
+Array: contains multiple values of any type. constructed with `[x, y, z]`
 
 Code: just code; can be constructed with `{code}`
 
 Comment: does absolutely nothing, stripped on pc=0; constructed with `//comment//`
 
-String: syntactic sugar for a list of integers representing the ASCII values inside the string; constructed with `"string"`
+String: syntactic sugar for a array of integers representing the ASCII values inside the string; constructed with `"string"`
 
 Function: basically just becomes a keyword that treats the next n (#arguments) pieces of data as its inputs; constructed using `!name [inputs] {code}`
 
 # operators:
 
-`list|n`: resolves to value at index `n` of `list`
+`array|n`: resolves to value at index `n` of `array`
 
 `-n`: resolves to negated n
 
@@ -48,9 +48,9 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 
 `times (expr) {code}`: runs `code`, `expr` times; if `expr` resolves to `true`, the code is run forever
 
-`putc (n)`: prints a single character `n` as an ASCII value
+`putchar (n)`: prints a single character `n` as an ASCII value
 
-`puts [n]`: prints out each number of the list `n` as an ASCII value
+`putarr [n]`: prints out each number of the array `n` as an ASCII value
 
 `break`: break out of block
 
