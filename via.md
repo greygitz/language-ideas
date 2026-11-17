@@ -52,4 +52,6 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 
 `puts [n]`: prints out each number of the list `n` as an ASCII value
 
-`break`: break out of loop
+`break`: break out of block
+
+`exec {code}`: execute given code
