@@ -20,13 +20,15 @@ String: syntactic sugar for a array of integers representing the ASCII values in
 
 `array|n`: resolves to value at index `n` of `array`
 
+`array|n = value`: sets value at index `n` of `array` to `value`
+
 `x -> Type`: cast value `x` to another type, `Type`, which can be `Array`, `Integer`, `Boolean` or `String`. does not modify variables
 
 `!name [inputs] {code}`: create function; basically just becomes a keyword that treats the next n (#arguments) pieces of data as its inputs
 
 `//comment//`: comment, can be put literally anywhere since it is skipped over during execution
 
-`X = Y`: creates a variable in the containing block's variable table with name `X` and value `Y`
+`X = Y`: looks the name `X` up in the containing block's variable table, sets it to `Y`
 
 # operators
 
