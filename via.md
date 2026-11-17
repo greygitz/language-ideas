@@ -6,27 +6,33 @@ built to be interpreted easily
 
 Boolean: `true`/`false`
 
-Integer: 32-bit integer; constructed by just leaving numbers in code not separated by spaces
+Integer: 32-bit integer; constructed by just leaving numbers in code
 
-Expression: unresolved expression; guaranteed to resolve to Integer or Boolean eventually, resolves containing expressions before resolving itself. constructed with `(expr)`
+Expression: unresolved expression; guaranteed to resolve eventualy, resolves containing expressions before resolving itself. constructed with `(expr)`
 
 Array: contains multiple values of any type. constructed with `[x, y, z]`
 
 Code: just code; can be constructed with `{code}`
 
-Comment: does absolutely nothing, stripped on pc=0; constructed with `//comment//`
-
 String: syntactic sugar for a array of integers representing the ASCII values inside the string; constructed with `"string"`
 
-Function: basically just becomes a keyword that treats the next n (#arguments) pieces of data as its inputs; constructed using `!name [inputs] {code}`
-
-# operators:
+# syntax:
 
 `array|n`: resolves to value at index `n` of `array`
 
-`-n`: resolves to negated n
+`x -> Type`: cast value `x` to another type, `Type`, which can be `Array`, `Integer`, `Boolean` or `String`. does not modify variables
 
-`X = Y`: creates a variable in the global table with name `X` and value `Y`, resolves to nothing
+`!name [inputs] {code}`: create function; basically just becomes a keyword that treats the next n (#arguments) pieces of data as its inputs
+
+`//comment//`: comment, can be put literally anywhere since it is skipped over during execution
+
+`X = Y`: creates a variable in the containing block's variable table with name `X` and value `Y`
+
+# operators
+
+`-n`: resolves to negated n (note: do not put anything between `-` and `n`)
+
+`X`: looks the name `X` up in the containing block's variable table, resolves to that variable's value if found
 
 `(X + Y)`: resolves to the result of `X` + `Y`; only supports Integer, resolves containing expressions
 
@@ -46,7 +52,9 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 
 `if (expr) {code}`: runs `code`, but only if `expr` resolves to `true`
 
-`times (expr) {code}`: runs `code`, `expr` times; if `expr` resolves to `true`, the code is run forever
+`times (expr) {code}`: runs `code`, `expr` times
+
+`forever {code}`: run `code` forever
 
 `putchar (n)`: prints a single character `n` as an ASCII value
 
@@ -54,4 +62,4 @@ Function: basically just becomes a keyword that treats the next n (#arguments) p
 
 `break`: break out of block
 
-`exec {code}`: execute given code
+`do {code}`: execute given code
