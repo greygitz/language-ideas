@@ -49,7 +49,7 @@ for example, an add function:
 
 to create a variable or to move a value into it:
 ```js
-value >> VarName;
+value => VarName;
 ```
 (the variable is automatically created)
 
@@ -91,3 +91,5 @@ value >> VarName;
 # notes
 
 yes, you can reference variables directly like anywhere in an array, they're first class
+
+`=>` is only for variables i'm not going to make variables functions this isn't Forth
