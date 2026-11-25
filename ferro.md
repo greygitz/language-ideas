@@ -26,7 +26,7 @@ functions work just like normal, they take in an array (yes, an array) and retur
 
 to create a function:
 ```js
-["param1", "param2", {code}] >> Function >> funcName;
+["param1", "param2", {code}] >> Function => funcName;
 ```
 in the code section of created functions, you can pipe something to `Return` and pipe from whatever names you gave your parameters
 
@@ -39,7 +39,7 @@ for example, an add function:
 [
  'a', 'b',
  { [a, b] >> + >> Return; }
-] >> Function >> add;
+] >> Function => add;
 
 // you can now use it
 [5, 4] >> add >> void;
@@ -51,6 +51,7 @@ to create a variable or to move a value into it:
 ```js
 value => VarName;
 ```
+(`>>` is only for data flow. `=>` is for assignment)
 (the variable is automatically created)
 
 
